@@ -6,7 +6,7 @@ import Spinner from "../../ui/Spinner";
 import { useUpdateSetting } from "./useUpdateSetting";
 
 function UpdateSettingsForm() {
-  const { isLoading, error, settings = {} } = useSettings();
+  const { isLoading, settings = {} } = useSettings();
   const {
     breakfastPrice,
     maxGuestsPerBooking,
