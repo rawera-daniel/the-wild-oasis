@@ -4,7 +4,7 @@
 
 ## Description:
 
-The Wild Oasis is a dashboard that displays statistics on total sales revenue, guest arrivals/departures, and stay summaries. Detailed cabin information, including capacity, prices, discounted prices, and sorting functionality by price or name, comprises all booking details such as guest address, chosen cabin, booking status (unconfirmed, checked-in, checked-out), total price, and sorting functionality by date or status. user account management features, including registration, login, logout, and profile customization. It has separate preferences and a dark colour theme option. This user-friendly dashboard saves you tonnes of time by providing all the features and information you need in one easy-to-access place.T
+The Wild Oasis is a dashboard that displays statistics on total sales revenue, guest arrivals/departures, and stay summaries. Detailed cabin information, including capacity, prices, discounted prices, and sorting functionality by price or name, comprises all booking details such as guest address, chosen cabin, booking status (unconfirmed, checked-in, checked-out), total price, and sorting functionality by date or status. user account management features, including registration, login, logout, and profile customization. It has separate preferences and a dark colour theme option. This user-friendly dashboard saves you tonnes of time by providing all the features and information you need in one easy-to-access place.
 
 Visit the website at this [link](https://the-wild-oasis-rawera.vercel.app/) .
 
@@ -47,7 +47,7 @@ npm run dev
 
 control + click the link provided by the terminal.
 
-## How to Use the Project:
+## How to Use the website:
 
 - Login to the account. Use this email address, tohep29726@beeplush.com, with the password, 12345678.
 
@@ -57,9 +57,33 @@ control + click the link provided by the terminal.
 
 * Nothing showing in `bookings` or `cabins`? Click the 'Upload All' button at the bottom left to fill them up.
 
-* For each `booking`, you'll find buttons like see details, check in, check out, and delete. Just click the three dots (...) on the right to find them.
-* For each `cabins`, you'll find a button like duplicate, edit, and delete. Just click the three dots (...) on the right to find them. Use the 'Add new Cabin' button to add a new one.
 * In the top right corner, you'll see three icons: To edit profile, change theme, and sign out.
+
+## How to Use the Project:
+
+- Create a Supabse account. Check out the website [here](https://supabase.com/).
+
+- Click the 'New Project' button to get started. Then, find the 'Table Editor' button on the left side and click it to make a table.
+
+- The table contains four files: cabins, guests, bookings, and settings. For each table, turn on "enable row-level security," and it already has two columns called 'id' and 'created_at'.
+
+* **_The words inside the brackets tell you what type they are._**
+
+* Cabin table columns should contain name (text), maxCapacity (int2), regularPrice(int2), discount (int2), description (text), and image (text).
+
+* Guest table columns should contain fullName (text), email (text), nationalID (text), nationality (text), and countryFlag (text).
+
+* Booking table columns should contain startDate (timestamp), endDate (timestamp), numNights (int2), numGuests (int2), cabinPrice (float4), extrasPrice (float4), totalPrice (float4), status (text), hasBreakfast (bool), isPaid (bool), observations (text), cabinId, and guestId.
+
+* **_The cabinId and guestId columns in the booking table get their information from the cabin and guest tables. "To do that, click on the 'Edit Foreign Key Relation' button._**
+
+- Setting table columns should contain minBookingLength (int2), maxBookingLength (int2), maxGuestsPerBooking (int2), and breakfastPrice (float4). This table should only have one row.
+
+* Upload your image file to the storage section on the left sidebar, so the image columns can retrieve files from there."
+
+* To set up authentication, go to the authentication section on the left sidebar.
+
+* See the documentation for details and instructions. [Link](https://supabase.com/docs/reference/javascript/installing) .
 
 ## Credits:
 
